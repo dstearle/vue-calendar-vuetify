@@ -200,7 +200,20 @@
 
         methods: {
 
-            getEvents() {
+            // Connects to firebase
+            async getEvents() {
+
+                // The snapshot of the data collection
+                let snapshot = await db.collection('calEvent').get();
+
+                // Array to hold each iteration
+                let events = [];
+
+                snapshot.forEach(doc => {
+
+                    console.log(doc.data());
+
+                });
 
             }
 
