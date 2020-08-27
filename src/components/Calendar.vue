@@ -175,6 +175,19 @@
                 "4day": "4 Days"
             },
 
+            // Firbase
+            name: null,
+            details: null,
+            start: null,
+            end: null,
+            color: "#FF5733",
+            currentlyEditing: null,
+            selectedEvent: {},
+            selectedElement: null,
+            selectedOpen: false,
+            events: [],
+            dialog: false,
+
         }),
         
     };
