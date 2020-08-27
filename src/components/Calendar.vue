@@ -227,7 +227,14 @@
                 // Sets the data to the calendar 
                 this.events = eventsArray;
 
-            }
+            },
+
+            // Retrieves the color for each calendar event
+            getEventColor(ev) {
+
+                return ev.color
+
+            },
 
         }
         
