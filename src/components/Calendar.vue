@@ -156,6 +156,8 @@
 
 <script>
 
+    import { db } from '@/main';
+
     export default {
 
         components: {
@@ -189,6 +191,20 @@
             dialog: false,
 
         }),
+
+        mounted() {
+
+            this.getEvents();
+
+        },
+
+        methods: {
+
+            getEvents() {
+
+            }
+
+        }
         
     };
 
