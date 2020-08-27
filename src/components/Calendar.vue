@@ -206,14 +206,26 @@
                 // The snapshot of the data collection
                 let snapshot = await db.collection('calEvent').get();
 
-                // Array to hold each iteration
-                let events = [];
+                // Array to hold the data retrieved from firebase
+                let eventsArray = [];
 
                 snapshot.forEach(doc => {
 
-                    console.log(doc.data());
+                    // console.log(doc.data());
+
+                    // The data stored in firebase, except the id
+                    let appData = doc.data();
+
+                    // Sets the id to the retrieved data
+                    appData.id = doc.id;
+
+                    // Pushes the retrieved data to the events array
+                    eventsArray.push(appData);
 
                 });
+
+                // Sets the data to the calendar 
+                this.events = eventsArray;
 
             }
 
