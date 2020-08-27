@@ -82,6 +82,7 @@
                     color="primary"
                     :events="events"
                     :event-color="getEventColor"
+                    :now="today"
                     :type="type"
                     @click:event="showEvent"
                     @click:more="viewDay"
@@ -122,7 +123,7 @@
                             <v-btn icon>
                                 <v-icon>mdi-dots-vertical</v-icon>
                             </v-btn>
-                            
+
                         </v-toolbar>
 
                         <v-card-text>
@@ -162,7 +163,18 @@
         },
 
         data: () => ({
-            //
+
+            // Calendar Fields
+            today: new Date().toISOString().substr(0, 10),
+            focus: new Date().toISOString().substr(0, 10),
+            type: "month",
+            typeToLabel: {
+                month: "Month",
+                week: "Week",
+                day: 'Day',
+                "4day": "4 Days"
+            },
+
         }),
         
     };
