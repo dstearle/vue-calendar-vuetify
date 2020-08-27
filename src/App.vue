@@ -4,6 +4,9 @@
 
         <v-content>
 
+            <!-- Calendar -->
+            <Calendar />
+
         </v-content>
 
     </v-app>
@@ -15,15 +18,17 @@
     import Calendar from './components/Calendar';
 
     export default {
-    name: 'App',
 
-    components: {
-        Calendar,
-    },
+        name: 'App',
 
-    data: () => ({
-        //
-    }),
+        components: {
+            Calendar,
+        },
+
+        data: () => ({
+            //
+        }),
+
     };
 
 </script>
