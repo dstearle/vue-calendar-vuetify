@@ -294,6 +294,13 @@
                 this.$refs.calendar.next()
             },
 
+            // Edits the calendar event
+            editEvent(ev) {
+
+                this.currentlyEditing = ev.id
+
+            },
+
             // Popup for when user clicks on a day
             showEvent ({ nativeEvent, event }) {
                 const open = () => {
