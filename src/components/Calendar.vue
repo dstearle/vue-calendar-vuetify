@@ -11,7 +11,7 @@
                 <v-toolbar flat color="white">
 
                     <!-- New Event Button -->
-                    <v-btn color="primary" class="mr-4" @click="dialong = true" dark>
+                    <v-btn color="primary" class="mr-4" @click="dialog = true" dark>
                         New Event
                     </v-btn>
 
@@ -308,6 +308,40 @@
 
                 // Sets the data to the calendar 
                 this.events = eventsArray;
+
+            },
+
+            // Adds a new event to the calendar and firebase
+            async addEvent() {
+
+                // If form fields are filled
+                if(this.name && this.start && this.end) {
+
+                    // Adds new calendar event details to firebase
+                    await db.collection('calEvent').add({
+
+                        name: this.name,
+                        details: this.details,
+                        start: this.start,
+                        end: this.end,
+                        color: this.color,
+
+                    });
+
+                    // Shows the updated calendar
+                    this.getEvents();
+
+                    // Clears form fields
+                    this.name = "";
+                    this.details = "";
+                    this.start = "";
+                    this.end = "";
+                    this.color = "#FF5733";
+
+                }
+
+                // Else alert user that they are stupid
+                else { alert('Name, start and end date required') }
 
             },
 
