@@ -18,3 +18,4 @@
 
 - Vuetify
 - Firebase
+- VueTextareaAutosize
