@@ -2,12 +2,12 @@
 
     <v-app>
 
-        <v-content>
+        <v-main>
 
             <!-- Calendar -->
             <Calendar />
 
-        </v-content>
+        </v-main>
 
     </v-app>
 
