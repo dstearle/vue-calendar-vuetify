@@ -266,6 +266,24 @@
 
             },
 
+            // Updates the calendar event and firebase
+            async updateEvent(ev) {
+
+                // Promise that updates the details for the event
+                await db.collection('calEvent').doc(this.currentlyEditing).update({
+
+                    details: ev.details
+
+                })
+
+                // Closes the event
+                this.selectedOpen = false;
+
+                // Sets currently editing status back to null
+                this.currentlyEditing = null;
+
+            },
+
             // Retrieves the color for each calendar event
             getEventColor(ev) {
 
