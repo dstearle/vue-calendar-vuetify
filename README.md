@@ -1,24 +1,20 @@
 # vue-calendar-vuetify
 
-## Project setup
-```
-npm install
-```
+<br>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+**What Is This Project? :**
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- This project is an interactive calendar from Vuetify where you can view and schedule events. Events are stored via Firebase and can be edited and deleted as well.
 
-### Lints and fixes files
-```
-npm run lint
-```
+<br>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Notes:**
+
+- For making a Larael site live on AWS through elastic beanstalk refer to: https://www.youtube.com/watch?v=ISVaMijczKc
+
+<br>
+
+**Dependencies:**
+
+- Vuetify
+- Firebase
