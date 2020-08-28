@@ -284,6 +284,20 @@
 
             },
 
+            // Deletes the calendar event and firebase
+            async deleteEvent(ev) {
+
+                // Promise that deletes the details for the event
+                await db.collection('calEvent').doc(ev).delete()
+
+                // Closes the event
+                this.selectedOpen = false;
+
+                // Shows the updated calendar
+                this.getEvents();
+
+            },
+
             // Retrieves the color for each calendar event
             getEventColor(ev) {
 
